@@ -1,0 +1,10 @@
+<launch>
+
+<include file="$(find car_sim)/launch/load_map.launch"/>
+<node pkg="rviz" type="rviz" name="rviz" args="-d $(find car_sim)/rviz/my_gazebo_rviz.rviz"/>
+<node pkg="car_sim" type="car_sim_gazebo" name="car_sim_gazebo" />
+<!-- <node name="car_info_pub_node" pkg="my_mpc" type="car_info_pub_node"/> -->
+<node name="my_global_path" pkg="my_planner" type="path_generate.py"/>
+
+<include file="$(find diff_wheeled_robot_gazebo)/launch/diff_wheeled_gazebo.launch"/>
+</launch>

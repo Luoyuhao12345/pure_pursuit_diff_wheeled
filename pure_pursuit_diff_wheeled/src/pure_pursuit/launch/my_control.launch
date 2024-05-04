@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<launch>
+  <master auto="start"/>
+
+     <node name="pure_pursuit" pkg="pure_pursuit" type="my_pure_pursuit_node" output="screen"  respawn="true">
+        <param name="param_k" value = "1" type = "double"/> 
+        <param name="param_lfc" value = "0.2" type = "double"/> 
+        <param name="max_lfc" value = "0.5" type = "double"/>     
+        <param name="param_l" value = "0.3" type = "double"/>
+        <param name="max_vel" value = "1.2" type = "double"/>
+     </node>
+      
+</launch>
